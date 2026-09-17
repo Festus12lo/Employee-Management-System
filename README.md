@@ -2,6 +2,7 @@
 
 A full-stack, production-quality CRUD web application engineered with **React 19, TypeScript, Tailwind CSS, Framer Motion, Python, Django 6.1, Django REST Framework, and SQLite**. Designed following an Apple-inspired minimalist aesthetic and meeting all academic Standard Operating Procedure (SOP) requirements.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-2ea44f?style=for-the-badge&logo=github)](https://festus12lo.github.io/Employee-Management-System/)
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Festus12lo/Employee-Management-System&root-directory=frontend)
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Festus12lo/Employee-Management-System)
 
@@ -9,12 +10,12 @@ A full-stack, production-quality CRUD web application engineered with **React 19
 
 ## 🌐 Live Production Deployments
 
-The application is configured and deployed in production across **Vercel** (Frontend Client) and **Render** (Backend API):
+The application is deployed live and active:
 
 | Component | Platform / Host | Production Link | Status |
 | :--- | :--- | :--- | :--- |
-| **Frontend Web App** | **Vercel** | [https://employee-management-system-festus.vercel.app](https://employee-management-system-festus.vercel.app) | 🟢 Live |
-| **Backend REST API** | **Render** | [https://employee-management-system-backend.onrender.com/api/](https://employee-management-system-backend.onrender.com/api/) | 🟢 Live |
+| **Live Web Application** | **GitHub Pages (Global CDN)** | **[https://festus12lo.github.io/Employee-Management-System/](https://festus12lo.github.io/Employee-Management-System/)** | 🟢 Live (200 OK) |
+| **Backend REST API** | **Render** | [https://employee-management-system-backend.onrender.com/api/](https://employee-management-system-backend.onrender.com/api/) | 🟢 Configured |
 | **API Health Check** | **Render** | [https://employee-management-system-backend.onrender.com/api/health/](https://employee-management-system-backend.onrender.com/api/health/) | 🟢 200 OK |
 | **Employee Endpoints** | **Render** | [https://employee-management-system-backend.onrender.com/api/employees/](https://employee-management-system-backend.onrender.com/api/employees/) | 🟢 Active |
 

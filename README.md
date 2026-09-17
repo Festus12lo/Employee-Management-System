@@ -2,25 +2,45 @@
 
 A full-stack, production-quality CRUD web application engineered with **React 19, TypeScript, Tailwind CSS, Framer Motion, Python, Django 6.1, Django REST Framework, and SQLite**. Designed following an Apple-inspired minimalist aesthetic and meeting all academic Standard Operating Procedure (SOP) requirements.
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Festus12lo/Employee-Management-System)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Festus12lo/Employee-Management-System&root-directory=frontend)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Festus12lo/Employee-Management-System)
+
 ---
 
 ## Table of Contents
-1. [Project Overview](#project-overview)
-2. [Problem Statement](#problem-statement)
-3. [Key Features](#key-features)
-4. [Technology Stack](#technology-stack)
-5. [System Architecture](#system-architecture)
-6. [Project Directory Structure](#project-directory-structure)
-7. [Installation & Setup Guide](#installation--setup-guide)
+1. [One-Click Deployment](#one-click-deployment)
+2. [Project Overview](#project-overview)
+3. [Problem Statement](#problem-statement)
+4. [Key Features](#key-features)
+5. [Technology Stack](#technology-stack)
+6. [System Architecture](#system-architecture)
+7. [Application Screenshots](#application-screenshots)
+8. [Project Directory Structure](#project-directory-structure)
+9. [Installation & Setup Guide](#installation--setup-guide)
    - [Prerequisites](#prerequisites)
    - [Backend Setup (Django & DRF)](#backend-setup-django--drf)
    - [Database Migrations & Sample Data](#database-migrations--sample-data)
    - [Frontend Setup (React & Vite)](#frontend-setup-react--vite)
-8. [REST API Endpoints](#rest-api-endpoints)
-9. [Automated Testing](#automated-testing)
-10. [Design & UI/UX Principles](#design--uiux-principles)
-11. [Future Enhancements](#future-enhancements)
-12. [Repository & Authors](#repository--authors)
+10. [REST API Endpoints](#rest-api-endpoints)
+11. [Automated Testing](#automated-testing)
+12. [Design & UI/UX Principles](#design--uiux-principles)
+13. [Future Enhancements](#future-enhancements)
+14. [Repository & Authors](#repository--authors)
+
+---
+
+## One-Click Deployment
+
+Deploy the live application instantly to your cloud provider of choice:
+
+| Service | Target | Deploy Button / Link |
+| :--- | :--- | :--- |
+| **Render** | **Full-Stack (Backend API + Database + Frontend)** | [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Festus12lo/Employee-Management-System)<br>[Direct Deploy Link](https://render.com/deploy?repo=https://github.com/Festus12lo/Employee-Management-System) |
+| **Vercel** | **Frontend SPA (React 19 + Vite)** | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Festus12lo/Employee-Management-System&root-directory=frontend)<br>[Direct Deploy Link](https://vercel.com/new/clone?repository-url=https://github.com/Festus12lo/Employee-Management-System&root-directory=frontend) |
+| **Netlify** | **Frontend SPA (React 19 + Vite)** | [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Festus12lo/Employee-Management-System)<br>[Direct Deploy Link](https://app.netlify.com/start/deploy?repository=https://github.com/Festus12lo/Employee-Management-System) |
+
+> **Note on Render Deployment**: The repository includes a pre-configured [`render.yaml`](file:///c:/Users/Dead%20Eye/Documents/activ/render.yaml) blueprint that automatically provisions the Python backend with Gunicorn, runs migrations, seeds sample records, and hosts the React static frontend with client-side SPA routing.
 
 ---
 

@@ -300,6 +300,22 @@ Destroying test database for alias 'default'...
 
 ---
 
+## Application Screenshots
+
+### 1. Dashboard Overview
+Live workforce statistics, department distribution progress visualization, and recent onboardings.
+![EMS Dashboard](./documentation/screenshots/01_dashboard.png)
+
+### 2. Employees Directory
+Real-time search, multi-criteria filtering by department and status, and full CRUD action table.
+![EMS Employees Directory](./documentation/screenshots/02_employees_directory.png)
+
+### 3. System Health & Environment
+Live Django REST Framework API handshake, architecture specifications, and academic SOP checklist.
+![EMS Settings and Environment](./documentation/screenshots/03_settings_environment.png)
+
+---
+
 ## Design & UI/UX Principles
 
 1. **Restrained Color Hierarchy**:

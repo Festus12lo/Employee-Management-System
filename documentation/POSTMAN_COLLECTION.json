@@ -1,0 +1,174 @@
+{
+  "info": {
+    "_postman_id": "9a12b345-6789-4def-9012-ems-collection",
+    "name": "Employee Management System (EMS) API",
+    "description": "Comprehensive Postman collection for demonstrating all CRUD operations, validations, and dashboard endpoints for the Employee Management System.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Employees - List All (Read All)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/employees/",
+          "host": ["{{base_url}}"],
+          "path": ["employees", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2. Employees - Search & Filter",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/employees/?department=Engineering&status=Active&search=Arjun",
+          "host": ["{{base_url}}"],
+          "path": ["employees", ""],
+          "query": [
+            { "key": "department", "value": "Engineering" },
+            { "key": "status", "value": "Active" },
+            { "key": "search", "value": "Arjun" }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3. Employees - Get Single Record (Read One)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/employees/1/",
+          "host": ["{{base_url}}"],
+          "path": ["employees", "1", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "4. Employees - Create New Record (Create)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"employee_id\": \"EMP099\",\n  \"full_name\": \"Alex Rivers\",\n  \"email\": \"alex.rivers@company.com\",\n  \"phone\": \"+91 98765 43299\",\n  \"department\": \"Engineering\",\n  \"designation\": \"Staff Platform Engineer\",\n  \"salary\": \"98000.00\",\n  \"joining_date\": \"2024-04-01\",\n  \"status\": \"Active\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/employees/",
+          "host": ["{{base_url}}"],
+          "path": ["employees", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "5. Employees - Update Record (Update PUT)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"employee_id\": \"EMP001\",\n  \"full_name\": \"Arjun Kumar\",\n  \"email\": \"arjun.kumar@company.com\",\n  \"phone\": \"+91 98765 43210\",\n  \"department\": \"Engineering\",\n  \"designation\": \"Principal Architect\",\n  \"salary\": \"95000.00\",\n  \"joining_date\": \"2023-03-15\",\n  \"status\": \"Active\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/employees/1/",
+          "host": ["{{base_url}}"],
+          "path": ["employees", "1", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "6. Employees - Partial Update (PATCH)",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"status\": \"On Leave\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/employees/1/",
+          "host": ["{{base_url}}"],
+          "path": ["employees", "1", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "7. Employees - Delete Record (Delete)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/employees/1/",
+          "host": ["{{base_url}}"],
+          "path": ["employees", "1", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "8. Dashboard - Statistics Endpoint",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/dashboard/stats/",
+          "host": ["{{base_url}}"],
+          "path": ["dashboard", "stats", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "9. Auth - Staff Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"admin@company.com\",\n  \"password\": \"adminpassword123\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/auth/login/",
+          "host": ["{{base_url}}"],
+          "path": ["auth", "login", ""]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8000/api"
+    }
+  ]
+}

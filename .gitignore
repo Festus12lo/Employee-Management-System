@@ -23,6 +23,8 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+staticfiles/
+backend/staticfiles/
 
 # Database
 # Keep SQLite database local, recreated via migrations & seed command

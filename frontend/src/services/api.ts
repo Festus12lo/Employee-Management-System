@@ -7,7 +7,27 @@ import type {
   EmployeeFiltersState,
 } from '../types/employee';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
+const resolveApiUrl = (raw?: string): string => {
+  if (!raw || !raw.trim()) {
+    return 'http://127.0.0.1:8000/api';
+  }
+  let url = raw.trim();
+  // Prepend protocol if omitted (e.g. Render host 'ems-backend.onrender.com')
+  if (!/^https?:\/\//i.test(url)) {
+    url = url.startsWith('localhost') || url.startsWith('127.0.0.1')
+      ? `http://${url}`
+      : `https://${url}`;
+  }
+  // Strip trailing slashes
+  url = url.replace(/\/+$/, '');
+  // Append /api if not already present
+  if (!url.endsWith('/api')) {
+    url = `${url}/api`;
+  }
+  return url;
+};
+
+const API_BASE_URL = resolveApiUrl(import.meta.env.VITE_API_URL);
 
 export const apiClient = axios.create({
   baseURL: API_BASE_URL,

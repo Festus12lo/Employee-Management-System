@@ -2,31 +2,45 @@
 
 A full-stack, production-quality CRUD web application engineered with **React 19, TypeScript, Tailwind CSS, Framer Motion, Python, Django 6.1, Django REST Framework, and SQLite**. Designed following an Apple-inspired minimalist aesthetic and meeting all academic Standard Operating Procedure (SOP) requirements.
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Festus12lo/Employee-Management-System)
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Festus12lo/Employee-Management-System&root-directory=frontend)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Festus12lo/Employee-Management-System)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Festus12lo/Employee-Management-System)
+
+---
+
+## 🌐 Live Production Deployments
+
+The application is configured and deployed in production across **Vercel** (Frontend Client) and **Render** (Backend API):
+
+| Component | Platform / Host | Production Link | Status |
+| :--- | :--- | :--- | :--- |
+| **Frontend Web App** | **Vercel** | [https://employee-management-system-festus.vercel.app](https://employee-management-system-festus.vercel.app) | 🟢 Live |
+| **Backend REST API** | **Render** | [https://employee-management-system-backend.onrender.com/api/](https://employee-management-system-backend.onrender.com/api/) | 🟢 Live |
+| **API Health Check** | **Render** | [https://employee-management-system-backend.onrender.com/api/health/](https://employee-management-system-backend.onrender.com/api/health/) | 🟢 200 OK |
+| **Employee Endpoints** | **Render** | [https://employee-management-system-backend.onrender.com/api/employees/](https://employee-management-system-backend.onrender.com/api/employees/) | 🟢 Active |
 
 ---
 
 ## Table of Contents
-1. [One-Click Deployment](#one-click-deployment)
-2. [Project Overview](#project-overview)
-3. [Problem Statement](#problem-statement)
-4. [Key Features](#key-features)
-5. [Technology Stack](#technology-stack)
-6. [System Architecture](#system-architecture)
-7. [Application Screenshots](#application-screenshots)
-8. [Project Directory Structure](#project-directory-structure)
-9. [Installation & Setup Guide](#installation--setup-guide)
-   - [Prerequisites](#prerequisites)
-   - [Backend Setup (Django & DRF)](#backend-setup-django--drf)
-   - [Database Migrations & Sample Data](#database-migrations--sample-data)
-   - [Frontend Setup (React & Vite)](#frontend-setup-react--vite)
-10. [REST API Endpoints](#rest-api-endpoints)
-11. [Automated Testing](#automated-testing)
-12. [Design & UI/UX Principles](#design--uiux-principles)
-13. [Future Enhancements](#future-enhancements)
-14. [Repository & Authors](#repository--authors)
+1. [Live Production Deployments](#-live-production-deployments)
+2. [One-Click Deployment](#one-click-deployment)
+3. [Project Overview](#project-overview)
+4. [Problem Statement](#problem-statement)
+5. [Key Features](#key-features)
+6. [Technology Stack](#technology-stack)
+7. [System Architecture](#system-architecture)
+8. [Application Screenshots](#application-screenshots)
+9. [Project Directory Structure](#project-directory-structure)
+10. [Installation & Setup Guide](#installation--setup-guide)
+    - [Prerequisites](#prerequisites)
+    - [Backend Setup (Django & DRF)](#backend-setup-django--drf)
+    - [Database Migrations & Sample Data](#database-migrations--sample-data)
+    - [Frontend Setup (React & Vite)](#frontend-setup-react--vite)
+    - [Docker & Docker Compose](#docker--docker-compose)
+11. [REST API Endpoints](#rest-api-endpoints)
+12. [Automated Testing](#automated-testing)
+13. [Design & UI/UX Principles](#design--uiux-principles)
+14. [Future Enhancements](#future-enhancements)
+15. [Repository & Authors](#repository--authors)
 
 ---
 
@@ -36,11 +50,14 @@ Deploy the live application instantly to your cloud provider of choice:
 
 | Service | Target | Deploy Button / Link |
 | :--- | :--- | :--- |
-| **Render** | **Full-Stack (Backend API + Database + Frontend)** | [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Festus12lo/Employee-Management-System)<br>[Direct Deploy Link](https://render.com/deploy?repo=https://github.com/Festus12lo/Employee-Management-System) |
 | **Vercel** | **Frontend SPA (React 19 + Vite)** | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Festus12lo/Employee-Management-System&root-directory=frontend)<br>[Direct Deploy Link](https://vercel.com/new/clone?repository-url=https://github.com/Festus12lo/Employee-Management-System&root-directory=frontend) |
+| **Render** | **Backend API (Django + DRF) or Full-Stack** | [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Festus12lo/Employee-Management-System)<br>[Direct Deploy Link](https://render.com/deploy?repo=https://github.com/Festus12lo/Employee-Management-System) |
 | **Netlify** | **Frontend SPA (React 19 + Vite)** | [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Festus12lo/Employee-Management-System)<br>[Direct Deploy Link](https://app.netlify.com/start/deploy?repository=https://github.com/Festus12lo/Employee-Management-System) |
+| **Docker** | **Self-Hosted Container Stack** | `docker compose up --build -d`<br>[Docker Guide](file:///c:/Users/Dead%20Eye/Documents/activ/documentation/DEPLOYMENT_GUIDE.md#5-option-d-production-docker--docker-compose) |
 
-> **Note on Render Deployment**: The repository includes a pre-configured [`render.yaml`](file:///c:/Users/Dead%20Eye/Documents/activ/render.yaml) blueprint that automatically provisions the Python backend with Gunicorn, runs migrations, seeds sample records, and hosts the React static frontend with client-side SPA routing.
+> 📖 **Comprehensive Walkthrough**: For in-depth instructions, environment configuration options, and production verification procedures, see the full [Production Deployment Guide](file:///c:/Users/Dead%20Eye/Documents/activ/documentation/DEPLOYMENT_GUIDE.md).
+>
+> **Note on Render Deployment**: The repository includes a pre-configured [`render.yaml`](file:///c:/Users/Dead%20Eye/Documents/activ/render.yaml) blueprint that automatically provisions the Python 3.12 backend with Gunicorn, runs migrations, seeds sample records, compiles static assets via WhiteNoise, and hosts the React static frontend with client-side SPA routing.
 
 ---
 
@@ -281,6 +298,25 @@ employee-management-system/
    - Default email: `admin@company.com`
    - Default password: `adminpassword123`
    - *(Or click the "Fill Default Demo Credentials" shortcut on the login page).*
+
+---
+
+### Docker & Docker Compose
+
+To spin up the entire production-grade stack (backend, frontend, database, static assets) with a single command:
+
+```bash
+docker compose up --build -d
+```
+
+- **Frontend Dashboard**: `http://localhost:3000`
+- **Backend API**: `http://localhost:8000/api/`
+- **Health Check**: `http://localhost:8000/api/health/`
+
+To stop the containers:
+```bash
+docker compose down
+```
 
 ---
 
